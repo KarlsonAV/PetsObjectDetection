@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dogs&Cats</title>
+</head>
+<body>
+<div>
+    <h3>Upload your image</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br>
+        <input type="submit">
+    </form>
+</div>
+
+<div class="col-md-5">
+<div class="image-container">
+    {% if display_detection %}
+        <p class="text-center"><b>Detected Image</b></p>
+        <a href="/static/pets_upload/{{display_detection}}" target="_new"><img src="/static/pets_upload/{{display_detection}}" width="500" height="500" class="upload-image-thumb"></a>
+    {% endif %}
+</div>
+</div>
+</body>
+</html>
